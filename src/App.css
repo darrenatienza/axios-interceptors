@@ -1,0 +1,95 @@
+$success-color: #4f9b31;
+$warning-color: #bd3f1d;
+$disabled-color: #888;
+
+html, body {
+  color: #333;
+  font-size: 16px;
+  line-height: 20px;
+}
+body {
+  margin: 20px;
+  text-align: center;
+}
+
+h1 {
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.container {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 640px;
+}
+
+/** Buttons */
+
+.btn {
+  background: #57a1a6;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: #073f43 2px 3px 0px 0px;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px;
+  padding: 12px 24px;
+  transition: 0.1s all ease-in-out;
+  
+  &:active {
+    box-shadow: #0e474b 1px 1px 0px 0px;
+    transform: translate(2px, 3px);
+  }
+}
+
+.btn--small {
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 8px 16px;
+}
+
+.btn--success {
+  background: $success-color;
+  box-shadow: darken($success-color, 20) 2px 3px 0px 0px;
+  &:active {
+    box-shadow: darken($success-color, 20) 1px 1px 0px 0px;
+  }
+}
+
+.btn--warning {
+  background: $warning-color;
+  box-shadow: darken($warning-color, 20) 2px 3px 0px 0px;
+  &:active {
+    box-shadow: darken($warning-color, 20) 1px 1px 0px 0px;
+  }
+}
+
+.btn--disabled {
+  background: $disabled-color;
+  box-shadow: darken($disabled-color, 20) 2px 3px 0px 0px;
+  cursor: not-allowed;
+  &:active {
+    box-shadow: darken($disabled-color, 20) 2px 3px 0px 0px;
+    transform: none;
+  }
+}
+
+/** VanillaToasts customization */
+
+.vanillatoasts-toast {
+  text-align: left;
+}
+
+.vanillatoasts-text {
+  overflow: hidden;
+}
+
+.vanillatoasts-success {
+  border-color: $success-color
+}
+
+.vanillatoasts-warning {
+  border-color: $warning-color;
+}
